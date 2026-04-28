@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สำนักงานคลังจังหวัดสุราษฎร์ธานี</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+}
+
+/* พื้นหลัง */
+.bg {
+    background-image: url("ปกคลัง.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* 🔥 กล่องหลัก (ปรับให้เล็กลงแล้ว) */
+.overlay {
+    background: rgba(255,255,255,0.88);
+    padding: clamp(12px, 3.5vw, 28px);
+    border-radius: 16px;
+    text-align: center;
+    color: #333;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+
+    width: min(88%, 420px);
+}
+
+/* หัวข้อ */
+h1 {
+    font-size: clamp(18px, 4.5vw, 28px);
+    margin: 0 0 8px 0;
+}
+
+/* คำอธิบาย */
+p {
+    font-size: clamp(12px, 3.5vw, 16px);
+    margin-bottom: 16px;
+}
+
+/* ปุ่มหลัก */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: clamp(13px, 3.8vw, 16px);
+    border: none;
+    border-radius: 10px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+@media (hover:hover){
+    .btn:hover {
+        background: #0056b3;
+        transform: translateY(-1px);
+    }
+}
+
+/* 🔥 ปุ่มล่าง 3 ปุ่มแนวนอน */
+.bottom-buttons {
+    margin-top: 12px;
+    width: min(88%, 420px);
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+/* ปุ่มลิงก์ */
+.link-btn {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: clamp(10px, 2.6vw, 12px);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+@media (hover:hover){
+    .link-btn:hover {
+        background: #f1f1f1;
+        transform: translateY(-2px);
+    }
+}
+
+/* มือถือ → กลับเป็นแนวตั้ง */
+@media (max-width: 600px) {
+    .bottom-buttons {
+        flex-direction: column;
+    }
+}
+
+/* มือถือเล็ก */
+@media (max-width: 480px) {
+    .overlay {
+        border-radius: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+
+    <!-- กล่องกลาง -->
+    <div class="overlay">
+        <h1>สำนักงานคลังจังหวัดสุราษฎร์ธานี</h1>
+        <p>ระบบให้คำปรึกษาและออกบัตรคิว</p>
+
+        <button class="btn" onclick="goToApp()">
+            เข้าสู่ระบบให้บริการ
+        </button>
+    </div>
+
+    <!-- 🔥 ปุ่มล่าง 3 ปุ่ม -->
+    <div class="bottom-buttons">
+
+        <button class="link-btn" onclick="goToCGD()">
+            กรมบัญชีกลาง
+        </button>
+
+        <button class="link-btn" onclick="goToProvincial()">
+            สำนักงานคลังจังหวัดสุราษฎร์ธานี
+        </button>
+
+        <button class="link-btn" onclick="goToCustom()">
+            กฎหมายและระเบียบการคลัง
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+function goToApp(){
+    window.location.href = "พึงพอใจ.html";
+}
+
+function goToCGD(){
+    window.open("https://www.cgd.go.th", "_blank");
+}
+
+function goToProvincial(){
+    window.open("https://www.cgd.go.th/cs/srt/srt/Home.html?page_locale=th_TH", "_blank");
+}
+
+function goToCustom(){
+    window.open("https://sarabanlaw.cgd.go.th/edas-search/", "_blank");
+}
+</script>
+
+</body>
+</html>
