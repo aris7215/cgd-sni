@@ -95,10 +95,12 @@ h1 {
 
 <!-- เมนูหลัก -->
 <div id="menu" class="menu">
-    <button onclick="openSection('pension')">บำเหน็จบำนาญ</button>
+    <button onclick="openSection('pension')">บำเหน็จค้ำประกันและบำเหน็จบำนาญ</button>
     <button onclick="openSection('policy')">นโยบายรัฐ เช่น บัตรสวัสดิการแห่งรัฐ และ กอช.</button>
+    <button onclick="openSection('mcef')">การวิเคราะห์ข้อมูลการคลังและเศรษฐกิจ</button>
     <button onclick="openSection('egp')">ระบบ e-GP</button>
     <button onclick="openSection('gfm')">ระบบ New GFMIS Thai</button>
+    <button onclick="openSection('faq')">คำถามที่พบบ่อย (FAQ)</button>
     <button onclick="getQueue()">📄 รับบัตรคิว</button>
 </div>
 
@@ -154,6 +156,9 @@ function openSection(type){
     }
     if(type === "policy"){
         text = "นโยบายรัฐ เช่น บัตรสวัสดิการแห่งรัฐ และ กอช.";
+    }
+    if(type === "mcef"){
+        text = "การวิเคราะห์ข้อมูลการคลังและเศรษฐกิจ";
     }
     if(type === "egp"){
         text = "ระบบ e-GP ใช้สำหรับจัดซื้อจัดจ้างภาครัฐ";
