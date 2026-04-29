@@ -100,7 +100,6 @@ h1 {
     <button onclick="openSection('mcef')">การวิเคราะห์ข้อมูลการคลังและเศรษฐกิจ</button>
     <button onclick="openSection('egp')">ระบบ e-GP</button>
     <button onclick="openSection('gfm')">ระบบ New GFMIS Thai</button>
-    <button >คำถามที่พบบ่อย (FAQ)</button>
     <button onclick="getQueue()">📄 รับบัตรคิว</button>
 </div>
 
@@ -171,6 +170,7 @@ function openSection(type){
         <h2>ข้อมูลเบื้องต้น</h2>
         <p>${text}</p>
         <button onclick="getQueue()">พบเจ้าหน้าที่ / รับคิว</button>
+        <br><button>คำถามที่พบบ่อย (FAQ)</button>
         <br><button class="back" onclick="goHome()">กลับ</button>
     `;
     document.getElementById("content").style.display = "block";
